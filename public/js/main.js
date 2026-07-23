@@ -1,10 +1,4 @@
 (function () {
-  function fmtTime(iso) {
-    var d = new Date(iso);
-    if (isNaN(d.getTime())) return '';
-    return d.toLocaleString([], { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
-  }
-
   function initials(name) {
     var parts = String(name).trim().split(/\s+/);
     if (parts.length === 1) return parts[0].slice(0, 3).toUpperCase();
@@ -27,18 +21,52 @@
     return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
 
-  function renderMatch(m) {
+  function renderLeg(m, legNum) {
     var scoreHtml = (m.status === 'scheduled')
       ? '<span class="score--vs">VS</span>'
       : '<span class="score">' + m.scoreA + ' &ndash; ' + m.scoreB + '</span>';
 
     return (
-      '<div class="match-card">' +
+      '<div class="leg-row">' +
+        '<span class="leg-tag">L' + legNum + '</span>' +
         statusChip(m) +
         '<div class="team team--a"><span>' + escapeHtml(m.teamA) + '</span><span class="team-badge">' + initials(m.teamA) + '</span></div>' +
         scoreHtml +
         '<div class="team team--b"><span class="team-badge">' + initials(m.teamB) + '</span><span>' + escapeHtml(m.teamB) + '</span></div>' +
-        '<div class="match-meta">' + fmtTime(m.kickoff) + '</div>' +
+      '</div>'
+    );
+  }
+
+  function tieKey(m) {
+    return [m.teamA, m.teamB].slice().sort().join(' :: ');
+  }
+
+  function groupIntoTies(matches) {
+    var order = [];
+    var byPair = {};
+    matches.forEach(function (m) {
+      var key = tieKey(m);
+      if (!byPair[key]) { byPair[key] = []; order.push(key); }
+      byPair[key].push(m);
+    });
+    return order.map(function (key) { return byPair[key]; });
+  }
+
+  function renderTie(legs) {
+    var leg1 = legs[0];
+    var leg2 = legs[1] || {
+      teamA: leg1.teamB,
+      teamB: leg1.teamA,
+      scoreA: 0,
+      scoreB: 0,
+      status: 'scheduled',
+      kickoff: leg1.kickoff
+    };
+
+    return (
+      '<div class="tie-card">' +
+        renderLeg(leg1, 1) +
+        renderLeg(leg2, 2) +
       '</div>'
     );
   }
@@ -144,7 +172,7 @@
         '<div class="group-row__grid">' +
           '<div class="competition-block">' +
             '<div class="competition-block__header">Fixtures</div>' +
-            '<div class="fixtures">' + g.matches.map(renderMatch).join('') + '</div>' +
+            '<div class="fixtures">' + groupIntoTies(g.matches).map(renderTie).join('') + '</div>' +
           '</div>' +
           renderStandingsTable(computeStandings(g.matches)) +
         '</div>' +

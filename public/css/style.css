@@ -232,17 +232,31 @@ main {
 
 .fixtures { display: flex; flex-direction: column; }
 
-/* ---- Scoreboard ticket ---- */
-.match-card {
-  padding: 12px 16px;
-  display: grid;
-  grid-template-columns: 88px 1fr auto 1fr;
-  align-items: center;
-  gap: 10px;
+/* ---- Scoreboard ticket: one tie = two legs (home + away) grouped together ---- */
+.tie-card {
   border-bottom: 1px solid var(--line);
 }
 
-.match-card:last-child { border-bottom: none; }
+.tie-card:last-child { border-bottom: none; }
+
+.leg-row {
+  padding: 10px 16px;
+  display: grid;
+  grid-template-columns: 28px 88px 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.leg-row:first-child { padding-top: 12px; }
+.leg-row:last-child { padding-bottom: 12px; }
+
+.leg-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
 
 .status-chip {
   font-family: 'IBM Plex Mono', monospace;
@@ -316,16 +330,6 @@ main {
   font-weight: 600;
   min-width: 70px;
   text-align: center;
-}
-
-.match-meta {
-  grid-column: 1 / -1;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  color: var(--muted);
-  text-align: center;
-  padding-top: 4px;
-  letter-spacing: 0.5px;
 }
 
 .empty-state {
