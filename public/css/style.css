@@ -274,6 +274,7 @@ main {
 .status-chip--live { background: rgba(255, 77, 61, 0.15); color: var(--live); }
 .status-chip--finished { background: rgba(63, 166, 33, 0.15); color: var(--turf); }
 .status-chip--scheduled { background: var(--panel-raised); color: var(--muted); }
+.status-chip--postponed { background: rgba(255, 183, 3, 0.15); color: var(--accent); }
 
 .live-dot {
   width: 6px; height: 6px; border-radius: 50%;

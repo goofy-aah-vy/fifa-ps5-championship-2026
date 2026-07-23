@@ -12,6 +12,9 @@
     if (m.status === 'finished') {
       return '<span class="status-chip status-chip--finished">FT</span>';
     }
+    if (m.status === 'postponed') {
+      return '<span class="status-chip status-chip--postponed">POSTPONED</span>';
+    }
     return '<span class="status-chip status-chip--scheduled">' + fmtClock(m.kickoff) + '</span>';
   }
 
@@ -26,7 +29,7 @@
   }
 
   function renderLeg(m, legNum) {
-    var scoreHtml = (m.status === 'scheduled')
+    var scoreHtml = (m.status === 'scheduled' || m.status === 'postponed')
       ? '<span class="score--vs">VS</span>'
       : '<span class="score">' + m.scoreA + ' &ndash; ' + m.scoreB + '</span>';
 
@@ -69,7 +72,7 @@
       teamB: leg1.teamA,
       scoreA: 0,
       scoreB: 0,
-      status: 'scheduled',
+      status: leg1.status === 'postponed' ? 'postponed' : 'scheduled',
       kickoff: leg1.kickoff
     };
 
