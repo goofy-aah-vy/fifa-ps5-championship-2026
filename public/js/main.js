@@ -226,13 +226,11 @@
   }
 
   function load() {
-    fetch('/api/tournament').then(function (r) { return r.json(); }).then(function (t) {
-      document.getElementById('tournamentName').textContent = t.name;
-      document.getElementById('tournamentSubtitle').textContent = t.subtitle || '';
-    });
+    fetch('/data.json?t=' + Date.now()).then(function (r) { return r.json(); }).then(function (data) {
+      document.getElementById('tournamentName').textContent = data.tournament.name;
+      document.getElementById('tournamentSubtitle').textContent = data.tournament.subtitle || '';
 
-    fetch('/api/matches').then(function (r) { return r.json(); }).then(function (matches) {
-      latestGroups = groupBy(matches);
+      latestGroups = groupBy(data.matches);
       renderTabs();
       renderContent();
 
