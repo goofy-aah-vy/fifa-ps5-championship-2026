@@ -4,7 +4,7 @@
     "subtitle": "Group Stage – Knockouts – Final"
   },
   "matches": [
-    { "id": 1, "teamA": "Pulkit & Himanshu", "teamB": "Vy & Swapnaneel", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-23T16:00", "group": "Thursday" },
+    { "id": 1, "teamA": "Pulkit & Himanshu", "teamB": "Vy & Swapnaneel", "scoreA": 4, "scoreB": 1, "status": "finished", "kickoff": "2026-07-23T16:00", "group": "Thursday" },
     { "id": 2, "teamA": "Pulkit & Himanshu", "teamB": "Aman & Aashutosh", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-23T16:30", "group": "Thursday" },
     { "id": 3, "teamA": "Vy & Swapnaneel", "teamB": "Aman & Aashutosh", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-23T17:00", "group": "Thursday" },
     { "id": 4, "teamA": "Navneet & Soham", "teamB": "Ritish & Anuj", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-24T16:00", "group": "Friday" },
@@ -15,6 +15,7 @@
     { "id": 9, "teamA": "Raghavendra & Priyang", "teamB": "Tarun & Aishwary", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-27T19:30", "group": "Monday" },
     { "id": 10, "teamA": "Soham & Anuj", "teamB": "Rohit & Aniket", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-28T16:00", "group": "Tuesday" },
     { "id": 11, "teamA": "Soham & Anuj", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-28T16:30", "group": "Tuesday" },
-    { "id": 12, "teamA": "Rohit & Aniket", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-28T17:00", "group": "Tuesday" }
+    { "id": 12, "teamA": "Rohit & Aniket", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-28T17:00", "group": "Tuesday" },
+    { "id": 13, "teamA": "Vy & Swapnaneel", "teamB": "Pulkit & Himanshu", "scoreA": 3, "scoreB": 6, "status": "finished", "kickoff": "2026-07-23T17:30", "group": "Thursday" }
   ]
 }
