@@ -16,6 +16,6 @@
     { "id": 10, "teamA": "Soham & Anuj", "teamB": "Rohit & Aniket", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-28T16:00", "group": "Tuesday" },
     { "id": 11, "teamA": "Soham & Anuj", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-28T16:30", "group": "Tuesday" },
     { "id": 12, "teamA": "Rohit & Aniket", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-28T17:00", "group": "Tuesday" },
-    { "id": 13, "teamA": "Vy & Swapnaneel", "teamB": "Pulkit & Himanshu", "scoreA": 3, "scoreB": 6, "status": "finished", "kickoff": "2026-07-23T17:30", "group": "Thursday" }
+    { "id": 13, "teamA": "Vy & Swapnaneel", "teamB": "Pulkit & Himanshu", "scoreA": 3, "scoreB": 6, "status": "finished", "kickoff": "2026-07-23T16:00", "group": "Thursday" }
   ]
 }
