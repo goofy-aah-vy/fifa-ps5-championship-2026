@@ -31,6 +31,13 @@ const STORE_NAME = 'fifa-championship';
 const KEY = 'db';
 
 function getDbStore() {
+  // Automatic environment injection doesn't always reach every deploy —
+  // fall back to explicit siteID/token (from env vars) when it's missing.
+  const siteID = process.env.NETLIFY_SITE_ID;
+  const token = process.env.NETLIFY_BLOBS_TOKEN;
+  if (siteID && token) {
+    return getStore({ name: STORE_NAME, siteID: siteID, token: token });
+  }
   return getStore(STORE_NAME);
 }
 
