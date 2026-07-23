@@ -288,14 +288,28 @@ main {
 
 .team {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 2px;
   font-weight: 600;
   font-size: 14px;
 }
 
-.team--a { justify-content: flex-end; text-align: right; }
-.team--b { justify-content: flex-start; text-align: left; }
+.team--a { align-items: flex-end; text-align: right; }
+.team--b { align-items: flex-start; text-align: left; }
+
+.team-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-club {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
 
 .team-badge {
   width: 26px; height: 26px;
@@ -309,8 +323,6 @@ main {
   color: var(--muted);
   flex-shrink: 0;
 }
-
-.team--a .team-badge { order: 2; }
 
 .score {
   font-family: 'Teko', sans-serif;

@@ -21,6 +21,10 @@
     return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
 
+  function renderClub(club) {
+    return club ? '<span class="team-club">' + escapeHtml(club) + '</span>' : '';
+  }
+
   function renderLeg(m, legNum) {
     var scoreHtml = (m.status === 'scheduled')
       ? '<span class="score--vs">VS</span>'
@@ -30,9 +34,15 @@
       '<div class="leg-row">' +
         '<span class="leg-tag">L' + legNum + '</span>' +
         statusChip(m) +
-        '<div class="team team--a"><span>' + escapeHtml(m.teamA) + '</span><span class="team-badge">' + initials(m.teamA) + '</span></div>' +
+        '<div class="team team--a">' +
+          '<div class="team-main"><span class="team-name">' + escapeHtml(m.teamA) + '</span><span class="team-badge">' + initials(m.teamA) + '</span></div>' +
+          renderClub(m.clubA) +
+        '</div>' +
         scoreHtml +
-        '<div class="team team--b"><span class="team-badge">' + initials(m.teamB) + '</span><span>' + escapeHtml(m.teamB) + '</span></div>' +
+        '<div class="team team--b">' +
+          '<div class="team-main"><span class="team-badge">' + initials(m.teamB) + '</span><span class="team-name">' + escapeHtml(m.teamB) + '</span></div>' +
+          renderClub(m.clubB) +
+        '</div>' +
       '</div>'
     );
   }
