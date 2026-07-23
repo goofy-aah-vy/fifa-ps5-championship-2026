@@ -1,0 +1,48 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Order matters: the wildcard match for a specific match id must come
+# before the plain "/api/admin/matches" collection route.
+[[redirects]]
+  from = "/api/admin/matches/*"
+  to = "/.netlify/functions/admin-match?id=:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/matches"
+  to = "/.netlify/functions/admin-matches"
+  status = 200
+
+[[redirects]]
+  from = "/api/tournament"
+  to = "/.netlify/functions/tournament"
+  status = 200
+
+[[redirects]]
+  from = "/api/matches"
+  to = "/.netlify/functions/matches"
+  status = 200
+
+[[redirects]]
+  from = "/api/login"
+  to = "/.netlify/functions/login"
+  status = 200
+
+[[redirects]]
+  from = "/api/logout"
+  to = "/.netlify/functions/logout"
+  status = 200
+
+[[redirects]]
+  from = "/api/session"
+  to = "/.netlify/functions/session"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200

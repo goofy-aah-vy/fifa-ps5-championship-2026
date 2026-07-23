@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Work+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__eyebrow">Match Centre</div>
+    <h1 class="hero__title" id="tournamentName">Loading&hellip;</h1>
+    <p class="hero__subtitle" id="tournamentSubtitle"></p>
+  </header>
+
+  <nav class="tabbar" id="tabbar"></nav>
+
+  <main>
+    <section class="rules">
+      <h2 class="section-title">Format</h2>
+      <ol class="rules__list">
+        <li>Every fixture between two teams is played over <strong>2 legs</strong> &mdash; a home leg and an away leg.</li>
+        <li>The home side picks their in-game team first each leg, so across the two legs both sides get a first pick.</li>
+        <li>The two legs use <strong>4 unique in-game teams</strong> &mdash; whatever a player picked in leg 1 can't be picked again in leg 2.</li>
+        <li>The <strong>top 2</strong> from each group advance to the knockout bracket.</li>
+      </ol>
+    </section>
+
+    <div id="groupsContainer">
+      <div class="empty-state">Loading fixtures&hellip;</div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
