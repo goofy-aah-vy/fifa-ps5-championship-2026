@@ -258,6 +258,15 @@ main {
   letter-spacing: 0.5px;
 }
 
+.leg-note {
+  padding: 0 16px 10px 74px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
 .status-chip {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;

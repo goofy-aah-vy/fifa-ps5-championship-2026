@@ -6,7 +6,7 @@
   "matches": [
     { "id": 1, "teamA": "Pulkit & Himanshu", "teamB": "Vy & Swapnaneel", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 1, "status": "finished", "kickoff": "2026-07-23T16:00", "group": "Thursday" },
     { "id": 2, "teamA": "Aman & Aashutosh", "teamB": "Pulkit & Himanshu", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 4, "status": "finished", "kickoff": "2026-07-23T16:30", "group": "Thursday" },
-    { "id": 3, "teamA": "Vy & Swapnaneel", "teamB": "Aman & Aashutosh", "scoreA": 0, "scoreB": 0, "status": "postponed", "kickoff": "2026-07-23T17:00", "group": "Thursday" },
+    { "id": 3, "teamA": "Vy & Swapnaneel", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 0, "status": "finished", "kickoff": "2026-07-23T17:00", "group": "Thursday", "note": "Placeholder score — actual result forgotten" },
     { "id": 4, "teamA": "Ritish & Anuj", "teamB": "Soham & Anuj", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 10, "scoreB": 0, "status": "finished", "kickoff": "2026-07-24T16:00", "group": "Friday" },
     { "id": 5, "teamA": "Soham & Anuj", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-24T16:30", "group": "Friday" },
     { "id": 6, "teamA": "Malhaar & Shubham", "teamB": "Ritish & Anuj", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 0, "scoreB": 6, "status": "finished", "kickoff": "2026-07-24T17:00", "group": "Friday" },
@@ -19,6 +19,7 @@
     { "id": 13, "teamA": "Vy & Swapnaneel", "teamB": "Pulkit & Himanshu", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 3, "scoreB": 6, "status": "finished", "kickoff": "2026-07-23T16:00", "group": "Thursday" },
     { "id": 14, "teamA": "Pulkit & Himanshu", "teamB": "Aman & Aashutosh", "clubA": "Manchester City", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 2, "status": "finished", "kickoff": "2026-07-23T16:30", "group": "Thursday" },
     { "id": 15, "teamA": "Soham & Anuj", "teamB": "Ritish & Anuj", "clubA": "Real Madrid", "clubB": "Barcelona", "scoreA": 0, "scoreB": 10, "status": "finished", "kickoff": "2026-07-24T16:00", "group": "Friday" },
-    { "id": 16, "teamA": "Ritish & Anuj", "teamB": "Malhaar & Shubham", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 1, "status": "finished", "kickoff": "2026-07-24T17:00", "group": "Friday" }
+    { "id": 16, "teamA": "Ritish & Anuj", "teamB": "Malhaar & Shubham", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 1, "status": "finished", "kickoff": "2026-07-24T17:00", "group": "Friday" },
+    { "id": 17, "teamA": "Aman & Aashutosh", "teamB": "Vy & Swapnaneel", "scoreA": 1, "scoreB": 0, "status": "finished", "kickoff": "2026-07-23T17:00", "group": "Thursday", "note": "Placeholder score — actual result forgotten" }
   ]
 }

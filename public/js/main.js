@@ -46,7 +46,8 @@
           '<div class="team-main"><span class="team-badge">' + initials(m.teamB) + '</span><span class="team-name">' + escapeHtml(m.teamB) + '</span></div>' +
           renderClub(m.clubB) +
         '</div>' +
-      '</div>'
+      '</div>' +
+      (m.note ? '<div class="leg-note">&#9888; ' + escapeHtml(m.note) + '</div>' : '')
     );
   }
 
