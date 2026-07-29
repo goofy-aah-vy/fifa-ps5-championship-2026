@@ -8,7 +8,7 @@
     { "id": 2, "teamA": "Aman & Aashutosh", "teamB": "Pulkit & Himanshu", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 4, "status": "finished", "kickoff": "2026-07-23T16:30", "group": "Thursday" },
     { "id": 3, "teamA": "Vy & Swapnaneel", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 0, "status": "finished", "kickoff": "2026-07-23T17:00", "group": "Thursday", "note": "Placeholder score — actual result forgotten" },
     { "id": 4, "teamA": "Ritish & Anuj", "teamB": "Soham & Anuj", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 10, "scoreB": 0, "status": "finished", "kickoff": "2026-07-24T16:00", "group": "Friday" },
-    { "id": 5, "teamA": "Soham & Anuj", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled", "kickoff": "2026-07-24T16:30", "group": "Friday" },
+    { "id": 5, "teamA": "Malhaar & Shubham", "teamB": "Soham & Anuj", "scoreA": 5, "scoreB": 0, "status": "finished", "kickoff": "2026-07-24T16:30", "group": "Friday" },
     { "id": 6, "teamA": "Malhaar & Shubham", "teamB": "Ritish & Anuj", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 0, "scoreB": 6, "status": "finished", "kickoff": "2026-07-24T17:00", "group": "Friday" },
     { "id": 7, "teamA": "Ashutosh & Vasu", "teamB": "Balaji & Indra", "scoreA": 9, "scoreB": 0, "status": "finished", "kickoff": "2026-07-27T18:30", "group": "Monday", "note": "Balaji & Indra replaced Raghavendra & Priyang, who dropped out" },
     { "id": 8, "teamA": "Ashutosh & Vasu", "teamB": "Tarun & Aishwary", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 6, "scoreB": 1, "status": "finished", "kickoff": "2026-07-27T19:00", "group": "Monday", "note": "Tarun & Aishwary's away club unconfirmed (guessed Bayern Munich)" },
@@ -24,6 +24,7 @@
     { "id": 18, "teamA": "Rohit & Aniket", "teamB": "Navneet & Soham", "clubA": "Real Madrid", "clubB": "France", "scoreA": 4, "scoreB": 0, "status": "finished", "kickoff": "2026-07-28T16:00", "group": "Tuesday" },
     { "id": 19, "teamA": "Tarun & Aishwary", "teamB": "Ashutosh & Vasu", "clubA": "Real Madrid", "clubB": "Liverpool", "scoreA": 5, "scoreB": 2, "status": "finished", "kickoff": "2026-07-27T19:00", "group": "Monday" },
     { "id": 20, "teamA": "Balaji & Indra", "teamB": "Ashutosh & Vasu", "scoreA": 1, "scoreB": 4, "status": "finished", "kickoff": "2026-07-27T18:30", "group": "Monday" },
-    { "id": 21, "teamA": "Tarun & Aishwary", "teamB": "Balaji & Indra", "scoreA": 9, "scoreB": 1, "status": "finished", "kickoff": "2026-07-27T19:30", "group": "Monday" }
+    { "id": 21, "teamA": "Tarun & Aishwary", "teamB": "Balaji & Indra", "scoreA": 9, "scoreB": 1, "status": "finished", "kickoff": "2026-07-27T19:30", "group": "Monday" },
+    { "id": 22, "teamA": "Soham & Anuj", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 1, "status": "finished", "kickoff": "2026-07-24T16:30", "group": "Friday" }
   ]
 }
