@@ -37,8 +37,8 @@
       { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Rohit & Aniket", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
     ],
     "semifinals": [
-      { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf2", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
-      { "id": "sf2", "label": "SF2", "sourceA": "qf3", "sourceB": "qf4", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
+      { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf3", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
+      { "id": "sf2", "label": "SF2", "sourceA": "qf2", "sourceB": "qf4", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
     ],
     "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
   }
