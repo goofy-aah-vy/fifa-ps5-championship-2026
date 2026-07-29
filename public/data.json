@@ -28,5 +28,18 @@
     { "id": 22, "teamA": "Soham & Anuj", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 1, "status": "finished", "kickoff": "2026-07-24T16:30", "group": "Friday" },
     { "id": 23, "teamA": "Quentin & Mandar", "teamB": "Navneet & Soham", "scoreA": 0, "scoreB": 3, "status": "finished", "kickoff": "2026-07-28T16:30", "group": "Tuesday", "note": "Quentin & Mandar did not show up — bye awarded to Navneet & Soham" },
     { "id": 24, "teamA": "Quentin & Mandar", "teamB": "Rohit & Aniket", "scoreA": 0, "scoreB": 3, "status": "finished", "kickoff": "2026-07-28T17:00", "group": "Tuesday", "note": "Quentin & Mandar did not show up — bye awarded to Rohit & Aniket" }
-  ]
+  ],
+  "bracket": {
+    "quarterfinals": [
+      { "id": "qf1", "label": "QF1", "teamA": "Pulkit & Himanshu", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
+      { "id": "qf2", "label": "QF2", "teamA": "Aman & Aashutosh", "teamB": "Ritish & Anuj", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
+      { "id": "qf3", "label": "QF3", "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
+      { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Rohit & Aniket", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
+    ],
+    "semifinals": [
+      { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf2", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
+      { "id": "sf2", "label": "SF2", "sourceA": "qf3", "sourceB": "qf4", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
+    ],
+    "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
+  }
 }

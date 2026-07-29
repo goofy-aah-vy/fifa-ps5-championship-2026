@@ -231,9 +231,10 @@
     var html = '<button class="tab' + (activeTab === 'home' ? ' tab--active' : '') + '" data-tab="home">Home</button>' +
       latestGroups.map(function (g) {
         return '<button class="tab' + (activeTab === g.group ? ' tab--active' : '') + '" data-tab="' + escapeHtml(g.group) + '">' + escapeHtml(g.group) + '</button>';
-      }).join('');
+      }).join('') +
+      '<a class="tab tab--link" href="bracket.html">Knockouts</a>';
     tabbar.innerHTML = html;
-    Array.prototype.forEach.call(tabbar.querySelectorAll('.tab'), function (btn) {
+    Array.prototype.forEach.call(tabbar.querySelectorAll('button.tab'), function (btn) {
       btn.addEventListener('click', function () { selectTab(btn.getAttribute('data-tab')); });
     });
   }

@@ -120,6 +120,14 @@ h1, h2, .display {
   border-bottom-color: var(--accent);
 }
 
+.tab--link {
+  margin-left: auto;
+  color: var(--turf);
+  text-decoration: none;
+}
+
+.tab--link:hover { color: var(--turf); }
+
 .slide-dots {
   display: flex;
   justify-content: center;
@@ -571,4 +579,36 @@ a.link {
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
+}
+
+/* ---- Knockout bracket ---- */
+.bracket-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bracket-round__matches {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+}
+
+.bracket-match {
+  background: var(--panel-raised);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-name--tbd {
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
 }
