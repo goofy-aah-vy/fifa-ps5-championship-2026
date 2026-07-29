@@ -31,15 +31,18 @@
   ],
   "bracket": {
     "quarterfinals": [
-      { "id": "qf1", "label": "QF1", "teamA": "Pulkit & Himanshu", "teamB": "Malhaar & Shubham", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
-      { "id": "qf2", "label": "QF2", "teamA": "Aman & Aashutosh", "teamB": "Ritish & Anuj", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
-      { "id": "qf3", "label": "QF3", "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
-      { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Rohit & Aniket", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
+      { "id": "qf1", "label": "QF1", "teamA": "Pulkit & Himanshu", "teamB": "Malhaar & Shubham", "legs": [
+        { "teamA": "Pulkit & Himanshu", "teamB": "Malhaar & Shubham", "clubA": "Manchester City", "clubB": "Real Madrid", "scoreA": 9, "scoreB": 0, "status": "finished" },
+        { "teamA": "Malhaar & Shubham", "teamB": "Pulkit & Himanshu", "clubA": "Bayern Munich", "clubB": "Tottenham Hotspur", "scoreA": 2, "scoreB": 8, "status": "finished" }
+      ] },
+      { "id": "qf2", "label": "QF2", "teamA": "Aman & Aashutosh", "teamB": "Ritish & Anuj", "legs": [] },
+      { "id": "qf3", "label": "QF3", "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "legs": [] },
+      { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Rohit & Aniket", "legs": [] }
     ],
     "semifinals": [
-      { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf3", "scoreA": 0, "scoreB": 0, "status": "scheduled" },
-      { "id": "sf2", "label": "SF2", "sourceA": "qf2", "sourceB": "qf4", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
+      { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf3", "legs": [] },
+      { "id": "sf2", "label": "SF2", "sourceA": "qf2", "sourceB": "qf4", "legs": [] }
     ],
-    "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "scoreA": 0, "scoreB": 0, "status": "scheduled" }
+    "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "legs": [] }
   }
 }
