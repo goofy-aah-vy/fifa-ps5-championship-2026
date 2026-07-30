@@ -35,7 +35,10 @@
         { "teamA": "Pulkit & Himanshu", "teamB": "Malhaar & Shubham", "clubA": "Manchester City", "clubB": "Real Madrid", "scoreA": 9, "scoreB": 0, "status": "finished" },
         { "teamA": "Malhaar & Shubham", "teamB": "Pulkit & Himanshu", "clubA": "Bayern Munich", "clubB": "Tottenham Hotspur", "scoreA": 2, "scoreB": 8, "status": "finished" }
       ] },
-      { "id": "qf2", "label": "QF2", "teamA": "Aman & Aashutosh", "teamB": "Ritish & Anuj", "legs": [] },
+      { "id": "qf2", "label": "QF2", "teamA": "Aman & Aashutosh", "teamB": "Ritish & Anuj", "legs": [
+        { "teamA": "Ritish & Anuj", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 2, "status": "finished" },
+        { "teamA": "Aman & Aashutosh", "teamB": "Ritish & Anuj", "scoreA": 4, "scoreB": 4, "status": "finished" }
+      ] },
       { "id": "qf3", "label": "QF3", "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "legs": [] },
       { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Rohit & Aniket", "legs": [] }
     ],
