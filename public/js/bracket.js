@@ -147,7 +147,7 @@
   }
 
   function load() {
-    fetch('/data.json?t=' + Date.now()).then(function (r) { return r.json(); }).then(function (data) {
+    fetch('data.json?t=' + Date.now()).then(function (r) { return r.json(); }).then(function (data) {
       document.getElementById('tournamentName').textContent = data.tournament.name;
 
       var container = document.getElementById('bracketContainer');
