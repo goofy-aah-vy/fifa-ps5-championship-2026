@@ -368,6 +368,21 @@ main {
   text-align: center;
 }
 
+.score--forgotten {
+  color: var(--live);
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.leg-note--forgotten {
+  color: var(--live);
+}
+
+.leg-note--info {
+  color: var(--muted);
+}
+
 .empty-state {
   color: var(--muted);
   text-align: center;

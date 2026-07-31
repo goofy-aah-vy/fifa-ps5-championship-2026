@@ -6,7 +6,7 @@
   "matches": [
     { "id": 1, "teamA": "Pulkit & Himanshu", "teamB": "Vy & Swapnaneel", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 1, "status": "finished", "kickoff": "2026-07-23T16:00", "group": "Thursday" },
     { "id": 2, "teamA": "Aman & Aashutosh", "teamB": "Pulkit & Himanshu", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 4, "status": "finished", "kickoff": "2026-07-23T16:30", "group": "Thursday" },
-    { "id": 3, "teamA": "Vy & Swapnaneel", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 0, "status": "finished", "kickoff": "2026-07-23T17:00", "group": "Thursday", "note": "Placeholder score — actual result forgotten" },
+    { "id": 3, "teamA": "Vy & Swapnaneel", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 0, "status": "finished", "kickoff": "2026-07-23T17:00", "group": "Thursday", "scoreForgotten": true },
     { "id": 4, "teamA": "Ritish & Anuj", "teamB": "Soham & Anuj", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 10, "scoreB": 0, "status": "finished", "kickoff": "2026-07-24T16:00", "group": "Friday" },
     { "id": 5, "teamA": "Malhaar & Shubham", "teamB": "Soham & Anuj", "scoreA": 5, "scoreB": 0, "status": "finished", "kickoff": "2026-07-24T16:30", "group": "Friday" },
     { "id": 6, "teamA": "Malhaar & Shubham", "teamB": "Ritish & Anuj", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 0, "scoreB": 6, "status": "finished", "kickoff": "2026-07-24T17:00", "group": "Friday" },
@@ -20,7 +20,7 @@
     { "id": 14, "teamA": "Pulkit & Himanshu", "teamB": "Aman & Aashutosh", "clubA": "Manchester City", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 2, "status": "finished", "kickoff": "2026-07-23T16:30", "group": "Thursday" },
     { "id": 15, "teamA": "Soham & Anuj", "teamB": "Ritish & Anuj", "clubA": "Real Madrid", "clubB": "Barcelona", "scoreA": 0, "scoreB": 10, "status": "finished", "kickoff": "2026-07-24T16:00", "group": "Friday" },
     { "id": 16, "teamA": "Ritish & Anuj", "teamB": "Malhaar & Shubham", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 4, "scoreB": 1, "status": "finished", "kickoff": "2026-07-24T17:00", "group": "Friday" },
-    { "id": 17, "teamA": "Aman & Aashutosh", "teamB": "Vy & Swapnaneel", "scoreA": 1, "scoreB": 0, "status": "finished", "kickoff": "2026-07-23T17:00", "group": "Thursday", "note": "Placeholder score — actual result forgotten" },
+    { "id": 17, "teamA": "Aman & Aashutosh", "teamB": "Vy & Swapnaneel", "scoreA": 1, "scoreB": 0, "status": "finished", "kickoff": "2026-07-23T17:00", "group": "Thursday", "scoreForgotten": true },
     { "id": 18, "teamA": "Rohit & Aniket", "teamB": "Navneet & Soham", "clubA": "Real Madrid", "clubB": "France", "scoreA": 4, "scoreB": 0, "status": "finished", "kickoff": "2026-07-28T16:00", "group": "Tuesday" },
     { "id": 19, "teamA": "Tarun & Aishwary", "teamB": "Ashutosh & Vasu", "clubA": "Real Madrid", "clubB": "Liverpool", "scoreA": 5, "scoreB": 2, "status": "finished", "kickoff": "2026-07-27T19:00", "group": "Monday" },
     { "id": 20, "teamA": "Balaji & Indra", "teamB": "Ashutosh & Vasu", "scoreA": 1, "scoreB": 4, "status": "finished", "kickoff": "2026-07-27T18:30", "group": "Monday" },
@@ -43,24 +43,24 @@
         { "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "clubA": "Real Madrid", "clubB": "Manchester City", "scoreA": 9, "scoreB": 1, "status": "finished" },
         { "teamA": "Navneet & Soham", "teamB": "Ashutosh & Vasu", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 2, "scoreB": 3, "status": "finished" }
       ] },
-      { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Aniket & Soham", "legs": [
-        { "teamA": "Tarun & Aishwary", "teamB": "Aniket & Soham", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten. Aniket & Soham is Rohit & Aniket's team with Rohit replaced by Soham." },
-        { "teamA": "Aniket & Soham", "teamB": "Tarun & Aishwary", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+      { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Aniket & Soham", "note": "Aniket & Soham is Rohit & Aniket's team with Rohit replaced by Soham", "legs": [
+        { "teamA": "Tarun & Aishwary", "teamB": "Aniket & Soham", "scoreA": 0, "scoreB": 1, "status": "finished", "scoreForgotten": true },
+        { "teamA": "Aniket & Soham", "teamB": "Tarun & Aishwary", "scoreA": 1, "scoreB": 0, "status": "finished", "scoreForgotten": true }
       ] }
     ],
     "semifinals": [
       { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf3", "legs": [
-        { "teamA": "Pulkit & Himanshu", "teamB": "Ashutosh & Vasu", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" },
-        { "teamA": "Ashutosh & Vasu", "teamB": "Pulkit & Himanshu", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+        { "teamA": "Pulkit & Himanshu", "teamB": "Ashutosh & Vasu", "scoreA": 1, "scoreB": 0, "status": "finished", "scoreForgotten": true },
+        { "teamA": "Ashutosh & Vasu", "teamB": "Pulkit & Himanshu", "scoreA": 0, "scoreB": 1, "status": "finished", "scoreForgotten": true }
       ] },
       { "id": "sf2", "label": "SF2", "sourceA": "qf2", "sourceB": "qf4", "legs": [
-        { "teamA": "Aman & Aashutosh", "teamB": "Aniket & Soham", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" },
-        { "teamA": "Aniket & Soham", "teamB": "Aman & Aashutosh", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+        { "teamA": "Aman & Aashutosh", "teamB": "Aniket & Soham", "scoreA": 1, "scoreB": 0, "status": "finished", "scoreForgotten": true },
+        { "teamA": "Aniket & Soham", "teamB": "Aman & Aashutosh", "scoreA": 0, "scoreB": 1, "status": "finished", "scoreForgotten": true }
       ] }
     ],
     "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "format": "bo3", "legs": [
-      { "teamA": "Pulkit & Himanshu", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" },
-      { "teamA": "Aman & Aashutosh", "teamB": "Pulkit & Himanshu", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+      { "teamA": "Pulkit & Himanshu", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 0, "status": "finished", "scoreForgotten": true },
+      { "teamA": "Aman & Aashutosh", "teamB": "Pulkit & Himanshu", "scoreA": 0, "scoreB": 1, "status": "finished", "scoreForgotten": true }
     ] }
   }
 }

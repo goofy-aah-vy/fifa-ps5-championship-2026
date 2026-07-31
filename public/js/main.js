@@ -29,9 +29,22 @@
   }
 
   function renderLeg(m, legNum) {
+    var forgotten = !!m.scoreForgotten;
     var scoreHtml = (m.status === 'scheduled' || m.status === 'postponed')
       ? '<span class="score--vs">VS</span>'
-      : '<span class="score">' + m.scoreA + ' &ndash; ' + m.scoreB + '</span>';
+      : forgotten
+        ? '<span class="score--vs score--forgotten">?</span>'
+        : '<span class="score">' + m.scoreA + ' &ndash; ' + m.scoreB + '</span>';
+
+    var noteHtml = '';
+    if (forgotten) {
+      var winnerName = m.scoreA > m.scoreB ? m.teamA : (m.scoreB > m.scoreA ? m.teamB : null);
+      noteHtml = '<div class="leg-note leg-note--forgotten">' +
+        (winnerName ? '<strong>' + escapeHtml(winnerName) + '</strong> won' : 'Result unclear') +
+        ' &mdash; I forgor the scores T_T</div>';
+    } else if (m.note) {
+      noteHtml = '<div class="leg-note">&#9888; ' + escapeHtml(m.note) + '</div>';
+    }
 
     return (
       '<div class="leg-row">' +
@@ -47,7 +60,7 @@
           renderClub(m.clubB) +
         '</div>' +
       '</div>' +
-      (m.note ? '<div class="leg-note">&#9888; ' + escapeHtml(m.note) + '</div>' : '')
+      noteHtml
     );
   }
 

@@ -117,9 +117,11 @@
   }
 
   function renderLeg(leg, legNum) {
-    var scoreHtml = leg.status === 'finished'
-      ? '<span class="score">' + leg.scoreA + ' &ndash; ' + leg.scoreB + '</span>'
-      : '<span class="score--vs">VS</span>';
+    var scoreHtml = leg.status !== 'finished'
+      ? '<span class="score--vs">VS</span>'
+      : leg.scoreForgotten
+        ? '<span class="score--vs score--forgotten">?</span>'
+        : '<span class="score">' + leg.scoreA + ' &ndash; ' + leg.scoreB + '</span>';
 
     return (
       '<div class="leg-row">' +
@@ -155,9 +157,15 @@
 
     var legsHtml = entry.legs.map(function (leg, i) { return renderLeg(leg, i + 1); }).join('');
     var winner = tieWinner(entry);
+    var anyForgotten = entry.legs.some(function (l) { return l.scoreForgotten; });
     var noteHtml = '';
 
-    if (entry.format === 'bo3') {
+    if (anyForgotten) {
+      var verb = entry.format === 'bo3' ? 'win the championship' : 'advance';
+      noteHtml = '<div class="leg-note leg-note--forgotten">' +
+        (winner ? '<strong>' + escapeHtml(winner) + '</strong> ' + verb : 'Result unclear') +
+        ' &mdash; I forgor the scores T_T</div>';
+    } else if (entry.format === 'bo3') {
       var series = bo3Summary(entry);
       if (series) {
         var seriesText = 'Series: ' + escapeHtml(series.a) + ' ' + series.winsA + ' &ndash; ' + series.winsB + ' ' + escapeHtml(series.b);
@@ -177,7 +185,9 @@
       }
     }
 
-    return '<div class="tie-card">' + legsHtml + noteHtml + '</div>';
+    var entryNoteHtml = entry.note ? '<div class="leg-note leg-note--info">' + escapeHtml(entry.note) + '</div>' : '';
+
+    return '<div class="tie-card">' + legsHtml + noteHtml + entryNoteHtml + '</div>';
   }
 
   function renderRound(title, entries, index) {
