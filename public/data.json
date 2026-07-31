@@ -43,12 +43,24 @@
         { "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "clubA": "Real Madrid", "clubB": "Manchester City", "scoreA": 9, "scoreB": 1, "status": "finished" },
         { "teamA": "Navneet & Soham", "teamB": "Ashutosh & Vasu", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 2, "scoreB": 3, "status": "finished" }
       ] },
-      { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Rohit & Aniket", "legs": [] }
+      { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Aniket & Soham", "legs": [
+        { "teamA": "Tarun & Aishwary", "teamB": "Aniket & Soham", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten. Aniket & Soham is Rohit & Aniket's team with Rohit replaced by Soham." },
+        { "teamA": "Aniket & Soham", "teamB": "Tarun & Aishwary", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+      ] }
     ],
     "semifinals": [
-      { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf3", "legs": [] },
-      { "id": "sf2", "label": "SF2", "sourceA": "qf2", "sourceB": "qf4", "legs": [] }
+      { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf3", "legs": [
+        { "teamA": "Pulkit & Himanshu", "teamB": "Ashutosh & Vasu", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" },
+        { "teamA": "Ashutosh & Vasu", "teamB": "Pulkit & Himanshu", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+      ] },
+      { "id": "sf2", "label": "SF2", "sourceA": "qf2", "sourceB": "qf4", "legs": [
+        { "teamA": "Aman & Aashutosh", "teamB": "Aniket & Soham", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" },
+        { "teamA": "Aniket & Soham", "teamB": "Aman & Aashutosh", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+      ] }
     ],
-    "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "format": "bo3", "legs": [] }
+    "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "format": "bo3", "legs": [
+      { "teamA": "Pulkit & Himanshu", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 0, "status": "finished", "note": "Placeholder score — actual result forgotten" },
+      { "teamA": "Aman & Aashutosh", "teamB": "Pulkit & Himanshu", "scoreA": 0, "scoreB": 1, "status": "finished", "note": "Placeholder score — actual result forgotten" }
+    ] }
   }
 }
