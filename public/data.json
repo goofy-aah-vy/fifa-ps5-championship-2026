@@ -46,6 +46,6 @@
       { "id": "sf1", "label": "SF1", "sourceA": "qf1", "sourceB": "qf3", "legs": [] },
       { "id": "sf2", "label": "SF2", "sourceA": "qf2", "sourceB": "qf4", "legs": [] }
     ],
-    "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "legs": [] }
+    "final": { "id": "final", "label": "Final", "sourceA": "sf1", "sourceB": "sf2", "format": "bo3", "legs": [] }
   }
 }

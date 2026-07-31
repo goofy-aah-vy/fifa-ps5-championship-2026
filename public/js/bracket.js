@@ -11,10 +11,49 @@
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
   }
 
+  // Best-of-3: each leg is a standalone match: whoever scores more wins that leg.
+  // First side to 2 leg-wins takes the series (legs beyond that aren't required).
+  function bo3Winner(entry) {
+    var wins = {};
+    var order = [];
+    entry.legs.forEach(function (leg) {
+      if (leg.status !== 'finished') return;
+      [leg.teamA, leg.teamB].forEach(function (t) {
+        if (wins[t] === undefined) { wins[t] = 0; order.push(t); }
+      });
+      if (leg.scoreA === leg.scoreB) return; // shouldn't happen — legs are played to a decisive result
+      var legWinner = leg.scoreA > leg.scoreB ? leg.teamA : leg.teamB;
+      wins[legWinner] += 1;
+    });
+    if (order.length !== 2) return null;
+    var a = order[0], b = order[1];
+    if (wins[a] >= 2) return a;
+    if (wins[b] >= 2) return b;
+    return null;
+  }
+
+  function bo3Summary(entry) {
+    var wins = {};
+    var order = [];
+    entry.legs.forEach(function (leg) {
+      [leg.teamA, leg.teamB].forEach(function (t) {
+        if (wins[t] === undefined) { wins[t] = 0; order.push(t); }
+      });
+      if (leg.status !== 'finished' || leg.scoreA === leg.scoreB) return;
+      var legWinner = leg.scoreA > leg.scoreB ? leg.teamA : leg.teamB;
+      wins[legWinner] += 1;
+    });
+    if (order.length !== 2) return null;
+    return { a: order[0], b: order[1], winsA: wins[order[0]], winsB: wins[order[1]] };
+  }
+
   // Aggregate across both legs; away goals (scored as teamB) break a tie,
   // matching the away-goals tiebreaker used in the group stage.
   function tieWinner(entry) {
-    if (!entry || !entry.legs || entry.legs.length < 2) return null;
+    if (!entry) return null;
+    if (entry.format === 'bo3') return bo3Winner(entry);
+
+    if (!entry.legs || entry.legs.length < 2) return null;
     if (!entry.legs.every(function (l) { return l.status === 'finished'; })) return null;
 
     var totals = {};
@@ -115,13 +154,27 @@
     }
 
     var legsHtml = entry.legs.map(function (leg, i) { return renderLeg(leg, i + 1); }).join('');
-    var agg = aggregateSummary(entry);
     var winner = tieWinner(entry);
     var noteHtml = '';
-    if (agg) {
-      var aggText = 'Aggregate: ' + escapeHtml(agg.a) + ' ' + agg.scoreA + ' &ndash; ' + agg.scoreB + ' ' + escapeHtml(agg.b);
-      if (winner) aggText += ' &middot; <strong>' + escapeHtml(winner) + '</strong> advance';
-      noteHtml = '<div class="leg-note">' + aggText + '</div>';
+
+    if (entry.format === 'bo3') {
+      var series = bo3Summary(entry);
+      if (series) {
+        var seriesText = 'Series: ' + escapeHtml(series.a) + ' ' + series.winsA + ' &ndash; ' + series.winsB + ' ' + escapeHtml(series.b);
+        if (winner) {
+          seriesText += ' &middot; <strong>' + escapeHtml(winner) + '</strong> win the championship';
+        } else if (entry.legs.length >= 3) {
+          seriesText += ' &middot; decider';
+        }
+        noteHtml = '<div class="leg-note">' + seriesText + '</div>';
+      }
+    } else {
+      var agg = aggregateSummary(entry);
+      if (agg) {
+        var aggText = 'Aggregate: ' + escapeHtml(agg.a) + ' ' + agg.scoreA + ' &ndash; ' + agg.scoreB + ' ' + escapeHtml(agg.b);
+        if (winner) aggText += ' &middot; <strong>' + escapeHtml(winner) + '</strong> advance';
+        noteHtml = '<div class="leg-note">' + aggText + '</div>';
+      }
     }
 
     return '<div class="tie-card">' + legsHtml + noteHtml + '</div>';
