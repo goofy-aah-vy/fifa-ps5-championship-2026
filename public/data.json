@@ -39,7 +39,10 @@
         { "teamA": "Ritish & Anuj", "teamB": "Aman & Aashutosh", "scoreA": 1, "scoreB": 2, "status": "finished" },
         { "teamA": "Aman & Aashutosh", "teamB": "Ritish & Anuj", "scoreA": 4, "scoreB": 4, "status": "finished" }
       ] },
-      { "id": "qf3", "label": "QF3", "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "legs": [] },
+      { "id": "qf3", "label": "QF3", "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "legs": [
+        { "teamA": "Ashutosh & Vasu", "teamB": "Navneet & Soham", "clubA": "Real Madrid", "clubB": "Manchester City", "scoreA": 9, "scoreB": 1, "status": "finished" },
+        { "teamA": "Navneet & Soham", "teamB": "Ashutosh & Vasu", "clubA": "Real Madrid", "clubB": "Bayern Munich", "scoreA": 3, "scoreB": 2, "status": "finished" }
+      ] },
       { "id": "qf4", "label": "QF4", "teamA": "Tarun & Aishwary", "teamB": "Rohit & Aniket", "legs": [] }
     ],
     "semifinals": [
