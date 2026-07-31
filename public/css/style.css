@@ -258,6 +258,12 @@ main {
 .leg-row:first-child { padding-top: 12px; }
 .leg-row:last-child { padding-bottom: 12px; }
 
+.leg-row > * { min-width: 0; }
+
+.team-main { flex-wrap: wrap; row-gap: 2px; }
+
+.team-name { overflow-wrap: anywhere; }
+
 .leg-tag {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
@@ -593,4 +599,44 @@ a.link {
   font-style: italic;
   font-weight: 500;
   font-size: 13px;
+}
+
+/* ---- Narrow screens: tighten the scoreboard rows so nothing overflows ---- */
+@media (max-width: 480px) {
+  main { padding: 24px 12px 60px; }
+
+  .leg-row {
+    grid-template-columns: 18px 56px 1fr auto 1fr;
+    gap: 6px;
+    padding: 10px 10px;
+  }
+
+  .leg-tag { font-size: 8px; }
+
+  .status-chip {
+    font-size: 9px;
+    padding: 2px 5px;
+    gap: 3px;
+  }
+
+  .team { font-size: 12px; gap: 1px; }
+
+  .team-main { gap: 5px; }
+
+  .team-badge { width: 20px; height: 20px; font-size: 8px; }
+
+  .team-club { font-size: 9px; }
+
+  .score {
+    font-size: 22px;
+    min-width: 44px;
+  }
+
+  .score--vs { min-width: 44px; font-size: 10px; }
+
+  .leg-note { padding: 0 10px 10px 44px; font-size: 9px; }
+
+  .standings th, .standings td { padding: 7px 5px; font-size: 11px; }
+
+  .form-row__team { font-size: 12px; }
 }
