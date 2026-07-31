@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Knockouts &middot; Mindtickle FIFA Championship</title>
+  <title>Bracket &middot; Mindtickle FIFA Championship</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Work+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -11,23 +11,23 @@
 </head>
 <body>
   <header class="hero">
-    <div class="hero__eyebrow">Knockouts</div>
+    <div class="hero__eyebrow">Bracket</div>
     <h1 class="hero__title" id="tournamentName">Loading&hellip;</h1>
-    <p class="hero__subtitle">Quarter-finals &amp; Semi-finals: 2-legged aggregate &middot; Final: best-of-3</p>
+    <p class="hero__subtitle">Winners in gold &middot; see Knockouts for leg-by-leg scores</p>
   </header>
 
   <nav class="tabbar">
     <a class="tab" href="index.html">Match Centre</a>
-    <span class="tab tab--active">Knockouts</span>
-    <a class="tab tab--link" href="tree.html">Bracket</a>
+    <a class="tab" href="bracket.html">Knockouts</a>
+    <span class="tab tab--active">Bracket</span>
   </nav>
 
   <main>
-    <div id="bracketContainer">
+    <div id="treeContainer">
       <div class="empty-state">Loading bracket&hellip;</div>
     </div>
   </main>
 
-  <script src="js/bracket.js?v=5"></script>
+  <script src="js/tree.js?v=1"></script>
 </body>
 </html>

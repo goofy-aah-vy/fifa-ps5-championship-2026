@@ -245,7 +245,8 @@
       latestGroups.map(function (g) {
         return '<button class="tab' + (activeTab === g.group ? ' tab--active' : '') + '" data-tab="' + escapeHtml(g.group) + '">' + escapeHtml(g.group) + '</button>';
       }).join('') +
-      '<a class="tab tab--link" href="bracket.html">Knockouts</a>';
+      '<a class="tab tab--link" href="bracket.html">Knockouts</a>' +
+      '<a class="tab tab--link" href="tree.html">Bracket</a>';
     tabbar.innerHTML = html;
     Array.prototype.forEach.call(tabbar.querySelectorAll('button.tab'), function (btn) {
       btn.addEventListener('click', function () { selectTab(btn.getAttribute('data-tab')); });

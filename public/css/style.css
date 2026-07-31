@@ -616,6 +616,171 @@ a.link {
   font-size: 13px;
 }
 
+/* ---- Visual bracket tree ---- */
+.bracket-tree-wrap {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.bracket-tree {
+  display: flex;
+  align-items: stretch;
+  gap: 48px;
+  min-width: 760px;
+  padding: 8px 24px 8px 4px;
+}
+
+.bt-round {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 180px;
+}
+
+.bt-round__label {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.bt-round--sf, .bt-round--final, .bt-round--champion {
+  flex: 1;
+}
+
+.bt-round--qf .bt-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.bt-round--qf .bt-pair::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 25%;
+  bottom: 25%;
+  width: 24px;
+  border-top: 2px solid var(--line);
+  border-right: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
+}
+
+.bt-round--sf {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bt-round--sf .bt-slot {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+}
+
+.bt-round--sf::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 25%;
+  bottom: 25%;
+  width: 24px;
+  border-top: 2px solid var(--line);
+  border-right: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
+}
+
+.bt-round--final {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+}
+
+.bt-round--final::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  width: 24px;
+  height: 2px;
+  background: var(--line);
+}
+
+.bt-round--champion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bt-match {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bt-side {
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bt-side:first-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.bt-side--winner {
+  color: var(--accent);
+  background: rgba(255, 183, 3, 0.1);
+}
+
+.bt-side--loser {
+  color: var(--muted);
+  font-weight: 500;
+  text-decoration: line-through;
+  text-decoration-color: var(--line);
+}
+
+.bt-side--tbd {
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.bt-trophy { margin-right: 2px; }
+
+.bt-champion {
+  background: linear-gradient(180deg, var(--panel-raised), var(--panel));
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.bt-champion__trophy {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.bt-champion__name {
+  font-family: 'Teko', sans-serif;
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 480px) {
+  .bracket-tree { gap: 32px; min-width: 680px; }
+  .bt-round { min-width: 150px; }
+}
+
 /* ---- Narrow screens: tighten the scoreboard rows so nothing overflows ---- */
 @media (max-width: 480px) {
   main { padding: 24px 12px 60px; }
